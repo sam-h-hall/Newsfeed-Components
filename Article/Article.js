@@ -103,11 +103,52 @@ const data = [
 
   Your function should take either an object as its one argument, or 5 separate arguments mapping to each piece of the data object above.
 
-  Step 2: Add an event listener to the expandButton span. This listener should toggle the class 'article-open' on the 'article' div.
-
+  
   Step 3: Don't forget to return something from your function!
-
+  
   Step 4: Outside your function, loop over the data. At each iteration you'll use your component to create an article and append it to the DOM inside the 'articles' div.
-
+  
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
-*/
+  
+  */
+ 
+ 
+ const articleMaker = (object) => {
+     article = document.createElement('div')
+     title = document.createElement('h2')
+     date = document.createElement('p')
+     p1 = document.createElement('p')
+     p2 = document.createElement('p')
+     p3 = document.createElement('p')
+     span = document.createElement('span')
+     
+     articlesDiv = document.querySelector('.articles')
+     articlesDiv.appendChild(article)
+     article.appendChild(title)
+     article.appendChild(date)
+     article.appendChild(p1)
+     article.appendChild(p2)
+     article.appendChild(p3)
+     article.appendChild(span)
+     
+     title.textContent = object.title
+     date.textContent = object.date
+     p1.textContent = object.firstParagraph
+     p2.textContent = object.secondParagraph
+     p3.textContent = object.thirdParagraph
+     const open = '\u261F'
+     span.textContent = open
+     
+     // article.classList.add('article')  // <-- alternate way
+     article.className = 'article'
+     date.className = 'date'
+     span.className = 'expandButton'
+     
+     return article
+     
+}
+    
+data.forEach(x => articleMaker(x))
+    
+// Step 2: Add an event listener to the expandButton span. This listener should toggle the class 'article-open' on the 'article' div.
+    
