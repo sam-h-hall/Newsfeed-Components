@@ -52,6 +52,5 @@ const menuMaker = (array) => {
     return menuDiv
 }
 
-
 const header = document.querySelector('.header')
 header.appendChild(menuMaker(menuItems))
