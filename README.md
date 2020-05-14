@@ -39,7 +39,7 @@ In this project we are going to be building a news feed reader. The goal is to h
 * Follow the instructions found in the Articles.js file to complete the JavaScript functionality and add the components to the DOM.
 
 ### Part 2: Add Articles
-
+    
 * Now that we have our components built, add a few articles of your own to the data array. Notice how our JavaScript code automatically creates the new articles and adds the styling and functionality we just built to them. This is the power of components. Write the code once and add as many components as you want all while maintaining the functionality we built!
 
 ### Part 3: The Menu
