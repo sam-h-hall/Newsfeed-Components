@@ -116,6 +116,7 @@ const data = [{
 
   Your function should take either an object as its one argument, or 5 separate arguments mapping to each piece of the data object above.
 
+  Step 2: Add an event listener to the expandButton span. This listener should toggle the class 'article-open' on the 'article' div.
   
   Step 3: Don't forget to return something from your function!
   
@@ -168,4 +169,9 @@ const articleMaker = (object) => {
 
 data.forEach(x => (articleMaker(x)))
 
-// Step 2: Add an event listener to the expandButton span. This listener should toggle the class 'article-open' on the 'article' div.
+
+gsap.from('.menu', {
+    duration: 2,
+    x: -10000
+})
+// gsap.to('.menu', {duration: 2, x: 1000})
